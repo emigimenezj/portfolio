@@ -1,5 +1,6 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { loadPost } from '../../utils/posts.ts';
+import { CSS } from "https://deno.land/x/gfm@0.1.30/mod.ts";
 
 export const handler: Handlers = {
     async GET(_, context) {
@@ -14,12 +15,11 @@ export default function PagePost(props: PageProps) {
 
     return (
         <article class="p-4">
-            <h1 class="text-2xl font-bold">Esto es el artículo!</h1>
+            <h1 class="text-2xl font-bold">{post.title}</h1>
             <time>{Intl.DateTimeFormat('es').format(post.date)}</time>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi officia quisquam, est eius nam inventore amet dolores molestiae atque neque voluptas similique deleniti reprehenderit praesentium accusantium culpa assumenda qui sed?
-            </p>
+            <br/>
+            <style dangerouslySetInnerHTML={{ __html: CSS }} />
+            <div class='markdown-body' dangerouslySetInnerHTML={{ __html: post.body }} />
         </article>
-        
     );
 }
