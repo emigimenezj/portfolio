@@ -1,5 +1,6 @@
-import type { Post } from "../types.d.ts";
-import { extract } from "https://deno.land/std@0.175.0/encoding/front_matter/any.ts";
+import type { Post } from '../types.d.ts';
+import { extract } from '$std/encoding/front_matter/any.ts';
+import { render as toHtml } from 'https://deno.land/x/gfm@0.1.30/mod.ts';
 
 export async function loadPost(id: string): Promise<Post | null> {
     const raw = await Deno
@@ -14,10 +15,23 @@ export async function loadPost(id: string): Promise<Post | null> {
     const post: Post = {
         id,
         title: params.title,
-        body,
-        date: new Date(params.date),
+        body: toHtml(body),
+        date: new Date(params.date), // TODO fix date not working properly
         excerpt: params.excerpt,
     }
 
     return post;
+}
+
+export async function listPosts(): Promise<Post[]> {
+    const promises = [];
+
+    for await (const entry of Deno.readDir('./content/posts')) {
+        const [id] = entry.name.split('.');
+        promises.push(loadPost(id));
+    }
+
+    const posts = await Promise.all(promises) as Post[];
+
+    return posts;
 }
