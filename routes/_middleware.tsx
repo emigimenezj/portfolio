@@ -1,4 +1,5 @@
 import { MiddlewareHandlerContext } from '$fresh/server.ts';
+import { getCookies } from '$std/http/cookie.ts'
 import { parse } from 'npm:accept-language-parser@1.5.0';
 import { ContextState } from '../types.d.ts';
 
@@ -10,6 +11,11 @@ export const handler = [
 
         context.state.locales = [];
         const locales = context.state.locales;
+
+        console.log(locales);
+
+        const { locale } = getCookies(req.headers);
+        if (locale) locales.push(locale);
         
         for (const {code, region} of preferredUserLanguage) {
             if (supportedLanguages.includes(code)) {
@@ -19,6 +25,8 @@ export const handler = [
         }
 
         if (locales.length === 0) locales.push(...supportedLanguages);
+
+        console.log(locales);
 
         return context.next();
     }
