@@ -6,17 +6,17 @@ export const handler: Handlers = {
     async GET(_, context) {
         const { id } = context.params;
         const post = await loadPost(id);
-        return context.render({post}); 
+        return context.render({post, locales: context.state.locales}); 
     }
 }
 
 export default function PagePost(props: PageProps) {
-    const { post } = props?.data || {};
+    const { post, locales } = props?.data || {};
 
     return (
         <article class="p-4">
             <h1 class="text-2xl font-bold">{post.title}</h1>
-            <time>{Intl.DateTimeFormat('es').format(post.date)}</time>
+            <time>{Intl.DateTimeFormat(locales, {timeZone: 'UTC', dateStyle: 'long'}).format(post.date)}</time>
             <br/>
             <style dangerouslySetInnerHTML={{ __html: CSS }} />
             <div class='markdown-body' dangerouslySetInnerHTML={{ __html: post.body }} />

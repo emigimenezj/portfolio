@@ -5,12 +5,12 @@ import { Post } from '../../types.d.ts';
 export const handler: Handlers = {
     async GET(_, context) {
         const posts = await listPosts();
-        return context.render({posts}); 
+        return context.render({posts, locales: context.state.locales}); 
     }
 }
 
 export default function Blog(props: PageProps) {
-    const { posts } = props?.data || {};
+    const { posts, locales } = props?.data || {};
 
     return (
         <main class='p-4'>
@@ -20,7 +20,7 @@ export default function Blog(props: PageProps) {
                     <h2 class='text-2xl font-bold'>
                         <a href={`./blog/${p.id}`} class='hover:text-blue-500'>{p.title}</a>
                     </h2>
-                    <time>{Intl.DateTimeFormat('es').format(p.date)}</time>
+                    <time>{Intl.DateTimeFormat(locales, {timeZone: 'UTC', dateStyle: 'long'}).format(p.date)}</time>
                 </article>
             ))}
         </main>
