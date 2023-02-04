@@ -5,3 +5,7 @@ export interface Post {
     date: Date;
     excerpt: string;
 }
+
+export interface ContextState {
+    locales?: string[];
+}
