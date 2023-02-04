@@ -221,5 +221,16 @@
     "https://esm.sh/v106/twind@0.16.17/deno/twind.js": "41f9ec5fe59338ccbd5877b6c7d2c41536b6ed725280d447777435fa446faabc",
     "https://esm.sh/v106/twind@0.16.17/sheets/sheets.d.ts": "73505b4708bcde9254db584db58166bda6e45860d905991a2cfa049dda805efa",
     "https://esm.sh/v106/twind@0.16.17/twind.d.ts": "880fbe3dea75d4d1ed627d272bae4afd34c1865be7f85ff10399aaaaaa3f7869"
+  },
+  "npm": {
+    "specifiers": {
+      "accept-language-parser@1.5.0": "accept-language-parser@1.5.0"
+    },
+    "packages": {
+      "accept-language-parser@1.5.0": {
+        "integrity": "sha512-QhyTbMLYo0BBGg1aWbeMG4ekWtds/31BrEU+DONOg/7ax23vxpL03Pb7/zBmha2v7vdD3AyzZVWBVGEZxKOXWw==",
+        "dependencies": {}
+      }
+    }
   }
 }
