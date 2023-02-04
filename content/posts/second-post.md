@@ -1,6 +1,6 @@
 ---
 title: OMG! Second post!
-date: 2023-02-01
+date: 2022-12-18
 excerpt: This is my second post.
 ---
 
