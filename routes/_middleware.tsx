@@ -1,11 +1,11 @@
 import { MiddlewareHandlerContext } from '$fresh/server.ts';
 import { getCookies } from '$std/http/cookie.ts'
-import { parse } from 'npm:accept-language-parser@1.5.0';
+import { parse } from 'https://esm.sh/accept-language-parser@1.5.0';
 import { ContextState } from '../types.d.ts';
 
 export const handler = [
     function checkLanguagePreference(req: Request, context: MiddlewareHandlerContext<ContextState>) {
-        const preferredUserLanguage = parse(req.headers.get('accept-language'));
+        const preferredUserLanguage = parse(req.headers.get('accept-language') as string);
         const supportedLanguages = ['en', 'es'];
 
         context.state.locales = [];
