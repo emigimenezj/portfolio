@@ -159,6 +159,7 @@
     "https://deno.land/x/ts_morph@16.0.0/ts_morph.d.ts": "38668b0e3780282a56a805425494490b0045d1928bd040c47a94095749dab8c3",
     "https://deno.land/x/ts_morph@16.0.0/ts_morph.js": "9fc0f3d6a3997c2df023fabc4e529d2117d214ffd4fd04247ca2f56c4e9cd470",
     "https://esm.sh/*preact-render-to-string@5.2.4": "b5ea1be1c1c40c87e04f7f29921e504032e0afa618ca8941aad479ea0f4d8751",
+    "https://esm.sh/accept-language-parser@1.5.0": "3dbe4e6f1d75d0d3441b71e325774367900ed7b67bed21d25ff4651d8729744b",
     "https://esm.sh/he@1.2.0": "41ecc0ae6825439852c1c70dac77b30ef4469429a2cc482da32e3788fd7be53b",
     "https://esm.sh/marked@4.2.12": "2d2846191abe84ffe668e83995da3543b197b62180ce06e4559027c0b777c22a",
     "https://esm.sh/preact@10.11.0": "e888b244446037c56f1881173fb51d1f5fa7aae5599e6c5154619346a6a5094e",
@@ -171,10 +172,12 @@
     "https://esm.sh/stable/preact@10.11.0/deno/preact.js": "071b515099e5dff2fe56768be62644e32fab702b194171357ccc4d7d1210144a",
     "https://esm.sh/twind@0.16.17": "fec14040d99e07d0bee23539f99ebabcbcb4717b9f6c86cf56a9dff39791c19d",
     "https://esm.sh/twind@0.16.17/sheets": "8d1b9acdbab6fe7df66b1957ff28505c79f7635cf2acbe24d95b283d1bdc86eb",
+    "https://esm.sh/v106/@types/accept-language-parser@1.5.3/index.d.ts": "cc67c7ba07d35570b854f24fd490a6a42e5caa6e17cb12dd360f25ba65b78754",
     "https://esm.sh/v106/@types/he@1.1.2/index.d.ts": "61a047439420bbbd844fc7d8413d44b5b14502d06593f560cfa2196aead46933",
     "https://esm.sh/v106/@types/marked@4.0.8/index.d.ts": "0b2fcecb260110d36514d4a845e10d98d19ae62f19ff18a5fc0181c31e1be8ef",
     "https://esm.sh/v106/@types/prismjs@1.26.0/index.d.ts": "6484309596f594ae824513336bd2a2e04a1902b06bb149fa904f5cae5fbe5c50",
     "https://esm.sh/v106/@types/sanitize-html@2.8.0/index.d.ts": "7da2855e307d77af654c0b7ff2e120f535375d1178a7a9557fb725414c967853",
+    "https://esm.sh/v106/accept-language-parser@1.5.0/deno/accept-language-parser.js": "490f02fa467ca3f5c57b35878d0d5b64b1e3a5c7fd017d32d815a8f841849462",
     "https://esm.sh/v106/csstype@3.1.1/index.d.ts": "1c29793071152b207c01ea1954e343be9a44d85234447b2b236acae9e709a383",
     "https://esm.sh/v106/deepmerge@4.3.0/esnext/deepmerge.js": "86820e0b883db2d379b28183d2bccec3e5253bf67119154143c2a8af67f7a24b",
     "https://esm.sh/v106/dom-serializer@2.0.0/esnext/dom-serializer.js": "5181740f2f050cd2a2d0c44c98fbd380d14470e64e23d1a9982da68bf8a2408c",
@@ -223,16 +226,5 @@
     "https://esm.sh/v106/twind@0.16.17/deno/twind.js": "41f9ec5fe59338ccbd5877b6c7d2c41536b6ed725280d447777435fa446faabc",
     "https://esm.sh/v106/twind@0.16.17/sheets/sheets.d.ts": "73505b4708bcde9254db584db58166bda6e45860d905991a2cfa049dda805efa",
     "https://esm.sh/v106/twind@0.16.17/twind.d.ts": "880fbe3dea75d4d1ed627d272bae4afd34c1865be7f85ff10399aaaaaa3f7869"
-  },
-  "npm": {
-    "specifiers": {
-      "accept-language-parser@1.5.0": "accept-language-parser@1.5.0"
-    },
-    "packages": {
-      "accept-language-parser@1.5.0": {
-        "integrity": "sha512-QhyTbMLYo0BBGg1aWbeMG4ekWtds/31BrEU+DONOg/7ax23vxpL03Pb7/zBmha2v7vdD3AyzZVWBVGEZxKOXWw==",
-        "dependencies": {}
-      }
-    }
   }
 }
