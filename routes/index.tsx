@@ -29,8 +29,9 @@ export const handler: Handlers = {
 }
 
 export default function Home(props: PageProps) {
+
   const [activeLanguage] = props.data.locales;
-  console.log(activeLanguage);
+  
   return (
     <main class="p-4">
       <p>Your current locale is <b>{activeLanguage}</b></p>

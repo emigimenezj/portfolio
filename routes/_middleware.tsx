@@ -3,7 +3,6 @@ import { getCookies } from '$std/http/cookie.ts'
 import { parse } from 'npm:accept-language-parser@1.5.0';
 import { ContextState } from '../types.d.ts';
 
-
 export const handler = [
     function checkLanguagePreference(req: Request, context: MiddlewareHandlerContext<ContextState>) {
         const preferredUserLanguage = parse(req.headers.get('accept-language'));
@@ -11,8 +10,6 @@ export const handler = [
 
         context.state.locales = [];
         const locales = context.state.locales;
-
-        console.log(locales);
 
         const { locale } = getCookies(req.headers);
         if (locale) locales.push(locale);
@@ -25,8 +22,6 @@ export const handler = [
         }
 
         if (locales.length === 0) locales.push(...supportedLanguages);
-
-        console.log(locales);
 
         return context.next();
     }
